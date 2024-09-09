@@ -14,4 +14,25 @@ function calculateAverageSales(salesData) {
 average = calculateAverageSales(salesData);
 console.log(average);
 
-    
+// Task 2 Create a Function to Determine Performance Rating
+function determinePerformanceRating(average) {
+    if (averageSales > 10000) {
+      return "Excellent";
+    } else if (average >= 7000 && average <= 10000) {
+      return "Good";
+    } else if (average >= 4000 && average < 7000) {
+      return "Satisfactory";
+    } else if (average < 4000) {
+      return "Needs Improvement";
+    } else {
+      // in case of invalid input 
+      return "Invalid sales data";
+    }
+  }
+
+console.log(determinePerformanceRating(average));
+
+
+
+
+
