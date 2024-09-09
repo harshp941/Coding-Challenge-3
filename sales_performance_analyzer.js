@@ -16,7 +16,7 @@ console.log(average);
 
 // Task 2 Create a Function to Determine Performance Rating
 function determinePerformanceRating(average) {
-    if (averageSales > 10000) {
+    if (average > 10000) {
       return "Excellent";
     } else if (average >= 7000 && average <= 10000) {
       return "Good";
@@ -32,7 +32,13 @@ function determinePerformanceRating(average) {
 
 console.log(determinePerformanceRating(average));
 
-
-
-
-
+// Task 3 Create a Function to Identify Top and Bottom Performers
+function findTopAndBottomPreformers(name) {
+    let (topPerformer, bottomPerformer) = name.reduce(acc, person) => 
+        if person.totalSales > acc.topPreformer.totalSales; {
+        return acc;
+        } 
+        if person.totalSales < acc.botomPerformer.totalSales;
+        return acc;
+    }
+console.log(findTopAndBottomPreformers(name));
