@@ -42,3 +42,34 @@ function findTopAndBottomPreformers(name) {
         return acc;
     }
 console.log(findTopAndBottomPreformers(name));
+
+// Task 4 Combine Functions to Generate a Performance Report
+function generatePerformanceReport(salesData);
+let salespeopleWithRatings = salesData.map(person => {
+    let averageSales = calculateAverageSales(person.sales);
+    let performanceRating = determinePerformanceRating(average);
+    
+    return {
+      name: person.name,
+      average: averageSales,
+      performanceRating: performanceRating
+    };
+  });
+  
+  // Find top and bottom performers
+  const { topPerformer, bottomPerformer } = findTopAndBottomPerformers(salesData);
+  
+  // Format the report
+  const report = {
+    salespeople: salespeopleWithRatings,
+    topPerformer: topPerformer ? {
+      name: topPerformer.name,
+      totalSales: topPerformer.totalSales
+    } 
+    bottomPerformer: bottomPerformer ? {
+      name: bottomPerformer.name,
+      totalSales: bottomPerformer.totalSales
+    } 
+  };
+  
+  return report;
